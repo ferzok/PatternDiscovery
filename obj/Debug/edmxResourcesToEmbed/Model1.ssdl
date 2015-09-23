@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dataModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="dataModelStoreContainer">
+    <EntitySet Name="ri_data" EntityType="dataModel.Store.ri_data" store:Type="Tables" Schema="data" />
+    <EntitySet Name="stat" EntityType="dataModel.Store.stat" store:Type="Tables" Schema="data" />
+    <EntitySet Name="temp_upload" EntityType="dataModel.Store.temp_upload" store:Type="Tables" Schema="data" />
+  </EntityContainer>
+  <EntityType Name="ri_data">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Code" Type="varchar" MaxLength="100" />
+    <Property Name="TradeTimestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PriceSize" Type="double" />
+    <Property Name="VolumeSize" Type="double" />
+    <Property Name="Up2WinTimestamp" Type="timestamp" Nullable="false" />
+    <Property Name="Up4WinTimestamp" Type="timestamp" Nullable="false" />
+    <Property Name="Up4Win2SlTimestamp" Type="timestamp" Nullable="false" />
+    <Property Name="Down4Win2SlTimestamp" Type="timestamp" Nullable="false" />
+    <Property Name="Up2Win" Type="bool" />
+    <Property Name="Up4Win" Type="bool" />
+    <Property Name="Up4Win2Sl" Type="bool" />
+    <Property Name="Down4Win2Sl" Type="bool" />
+    <Property Name="id" Type="bigint" Nullable="false" />
+    <Property Name="win" Type="double" />
+  </EntityType>
+  <EntityType Name="stat">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Count" Type="int" />
+    <Property Name="Up2win" Type="int" />
+    <Property Name="Up4win" Type="int" />
+    <Property Name="Up8win4Stop" Type="int" />
+    <Property Name="LastTime" Type="timestamp" />
+  </EntityType>
+  <EntityType Name="temp_upload">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Ric" Type="varchar" MaxLength="10" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Time" Type="time" />
+    <Property Name="offset" Type="int" />
+    <Property Name="period" Type="varchar" MaxLength="20" />
+    <Property Name="Open" Type="double" />
+    <Property Name="High" Type="double" />
+    <Property Name="Low" Type="double" />
+    <Property Name="Last" Type="double" />
+    <Property Name="Volume" Type="double" />
+    <Property Name="AvPrice" Type="double" />
+    <Property Name="VWAP" Type="double" />
+    <Property Name="Qty" Type="int" />
+    <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Datetime" Type="timestamp" />
+    <Property Name="Timestamp" Type="timestamp" />
+  </EntityType>
+</Schema>

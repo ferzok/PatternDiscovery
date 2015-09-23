@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4a57a5b53a65466b9054a8c574f20e9a" Name="Diagram1" >
+        <EntityTypeShape EntityType="dataModel.stat" Width="1.5" PointX="10.779480249983948" PointY="25.219149213851964" />
+        <EntityTypeShape EntityType="dataModel.temp_upload" Width="1.5" PointX="3.5163839941454977" PointY="13.239813542570833" />
+        <EntityTypeShape EntityType="dataModel.ri_data" Width="1.5" PointX="10.476681539079493" PointY="20.019358346247746" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,11 @@
+C:\Dropbox\documents\_Финансовые рынки\_PatternDiscovery\PatternDiscovery\PatternDiscovery\bin\Debug\PatternDiscovery.exe.config
+C:\Dropbox\documents\_Финансовые рынки\_PatternDiscovery\PatternDiscovery\PatternDiscovery\bin\Debug\PatternDiscovery.exe
+C:\Dropbox\documents\_Финансовые рынки\_PatternDiscovery\PatternDiscovery\PatternDiscovery\bin\Debug\PatternDiscovery.pdb
+C:\Dropbox\documents\_Финансовые рынки\_PatternDiscovery\PatternDiscovery\PatternDiscovery\bin\Debug\EntityFramework.dll
+C:\Dropbox\documents\_Финансовые рынки\_PatternDiscovery\PatternDiscovery\PatternDiscovery\bin\Debug\EntityFramework.xml
+C:\Dropbox\documents\_Финансовые рынки\_PatternDiscovery\PatternDiscovery\PatternDiscovery\obj\Debug\PatternDiscovery.Form1.resources
+C:\Dropbox\documents\_Финансовые рынки\_PatternDiscovery\PatternDiscovery\PatternDiscovery\obj\Debug\PatternDiscovery.Properties.Resources.resources
+C:\Dropbox\documents\_Финансовые рынки\_PatternDiscovery\PatternDiscovery\PatternDiscovery\obj\Debug\PatternDiscovery.csproj.GenerateResource.Cache
+C:\Dropbox\documents\_Финансовые рынки\_PatternDiscovery\PatternDiscovery\PatternDiscovery\obj\Debug\PatternDiscovery.exe
+C:\Dropbox\documents\_Финансовые рынки\_PatternDiscovery\PatternDiscovery\PatternDiscovery\obj\Debug\PatternDiscovery.pdb
+C:\Dropbox\documents\_Финансовые рынки\_PatternDiscovery\PatternDiscovery\PatternDiscovery\obj\Debug\PatternDiscovery.csprojResolveAssemblyReference.cache

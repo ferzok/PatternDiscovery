@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="dataModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="dataModelStoreContainer">
+          <EntitySet Name="ri_data" EntityType="dataModel.Store.ri_data" store:Type="Tables" Schema="data" />
+          <EntitySet Name="stat" EntityType="dataModel.Store.stat" store:Type="Tables" Schema="data" />
+          <EntitySet Name="temp_upload" EntityType="dataModel.Store.temp_upload" store:Type="Tables" Schema="data" />
+        </EntityContainer>
+        <EntityType Name="ri_data">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Code" Type="varchar" MaxLength="100" />
+          <Property Name="TradeTimestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PriceSize" Type="double" />
+          <Property Name="VolumeSize" Type="double" />
+          <Property Name="Up2WinTimestamp" Type="timestamp" Nullable="false" />
+          <Property Name="Up4WinTimestamp" Type="timestamp" Nullable="false" />
+          <Property Name="Up4Win2SlTimestamp" Type="timestamp" Nullable="false" />
+          <Property Name="Down4Win2SlTimestamp" Type="timestamp" Nullable="false" />
+          <Property Name="Up2Win" Type="bool" />
+          <Property Name="Up4Win" Type="bool" />
+          <Property Name="Up4Win2Sl" Type="bool" />
+          <Property Name="Down4Win2Sl" Type="bool" />
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="win" Type="double" />
+        </EntityType>
+        <EntityType Name="stat">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Count" Type="int" />
+          <Property Name="Up2win" Type="int" />
+          <Property Name="Up4win" Type="int" />
+          <Property Name="Up8win4Stop" Type="int" />
+          <Property Name="LastTime" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="temp_upload">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Ric" Type="varchar" MaxLength="10" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Time" Type="time" />
+          <Property Name="offset" Type="int" />
+          <Property Name="period" Type="varchar" MaxLength="20" />
+          <Property Name="Open" Type="double" />
+          <Property Name="High" Type="double" />
+          <Property Name="Low" Type="double" />
+          <Property Name="Last" Type="double" />
+          <Property Name="Volume" Type="double" />
+          <Property Name="AvPrice" Type="double" />
+          <Property Name="VWAP" Type="double" />
+          <Property Name="Qty" Type="int" />
+          <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Datetime" Type="timestamp" />
+          <Property Name="Timestamp" Type="timestamp" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dataModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="dataEntities" p1:LazyLoadingEnabled="true" >
+          <EntitySet Name="stats" EntityType="dataModel.stat" />
+          <EntitySet Name="temp_upload" EntityType="dataModel.temp_upload" />
+          <EntitySet Name="ri_data" EntityType="dataModel.ri_data" />
+        </EntityContainer>
+        <EntityType Name="stat">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Count" />
+          <Property Type="Int32" Name="Up2win" />
+          <Property Type="Int32" Name="Up4win" />
+          <Property Type="Int32" Name="Up8win4Stop" />
+          <Property Type="DateTime" Name="LastTime" />
+        </EntityType>
+        <EntityType Name="temp_upload">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="String" Name="Ric" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Date" />
+          <Property Type="Time" Name="Time" />
+          <Property Type="Int32" Name="offset" />
+          <Property Type="String" Name="period" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="Open" />
+          <Property Type="Double" Name="High" />
+          <Property Type="Double" Name="Low" />
+          <Property Type="Double" Name="Last" />
+          <Property Type="Double" Name="Volume" />
+          <Property Type="Double" Name="AvPrice" />
+          <Property Type="Double" Name="VWAP" />
+          <Property Type="Int32" Name="Qty" />
+          <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="Datetime" />
+          <Property Type="DateTime" Name="Timestamp" />
+        </EntityType>
+        <EntityType Name="ri_data">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="String" Name="Code" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="TradeTimestamp" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Double" Name="PriceSize" />
+          <Property Type="Double" Name="VolumeSize" />
+          <Property Type="DateTime" Name="Up2WinTimestamp" Nullable="false" />
+          <Property Type="DateTime" Name="Up4WinTimestamp" Nullable="false" />
+          <Property Type="DateTime" Name="Up4Win2SlTimestamp" Nullable="false" />
+          <Property Type="DateTime" Name="Down4Win2SlTimestamp" Nullable="false" />
+          <Property Type="Boolean" Name="Up2Win" />
+          <Property Type="Boolean" Name="Up4Win" />
+          <Property Type="Boolean" Name="Up4Win2Sl" />
+          <Property Type="Boolean" Name="Down4Win2Sl" />
+          <Property Type="Int64" Name="id" Nullable="false" />
+          <Property Type="Double" Name="win" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dataModelStoreContainer" CdmEntityContainer="dataEntities" >
+          <EntitySetMapping Name="stats">
+            <EntityTypeMapping TypeName="dataModel.stat">
+              <MappingFragment StoreEntitySet="stat">
+                <ScalarProperty Name="LastTime" ColumnName="LastTime" />
+                <ScalarProperty Name="Up8win4Stop" ColumnName="Up8win4Stop" />
+                <ScalarProperty Name="Up4win" ColumnName="Up4win" />
+                <ScalarProperty Name="Up2win" ColumnName="Up2win" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="temp_upload">
+            <EntityTypeMapping TypeName="dataModel.temp_upload">
+              <MappingFragment StoreEntitySet="temp_upload">
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="VWAP" ColumnName="VWAP" />
+                <ScalarProperty Name="AvPrice" ColumnName="AvPrice" />
+                <ScalarProperty Name="Volume" ColumnName="Volume" />
+                <ScalarProperty Name="Last" ColumnName="Last" />
+                <ScalarProperty Name="Low" ColumnName="Low" />
+                <ScalarProperty Name="High" ColumnName="High" />
+                <ScalarProperty Name="Open" ColumnName="Open" />
+                <ScalarProperty Name="period" ColumnName="period" />
+                <ScalarProperty Name="offset" ColumnName="offset" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Ric" ColumnName="Ric" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ri_data">
+            <EntityTypeMapping TypeName="dataModel.ri_data">
+              <MappingFragment StoreEntitySet="ri_data">
+                <ScalarProperty Name="win" ColumnName="win" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Down4Win2Sl" ColumnName="Down4Win2Sl" />
+                <ScalarProperty Name="Up4Win2Sl" ColumnName="Up4Win2Sl" />
+                <ScalarProperty Name="Up4Win" ColumnName="Up4Win" />
+                <ScalarProperty Name="Up2Win" ColumnName="Up2Win" />
+                <ScalarProperty Name="Down4Win2SlTimestamp" ColumnName="Down4Win2SlTimestamp" />
+                <ScalarProperty Name="Up4Win2SlTimestamp" ColumnName="Up4Win2SlTimestamp" />
+                <ScalarProperty Name="Up4WinTimestamp" ColumnName="Up4WinTimestamp" />
+                <ScalarProperty Name="Up2WinTimestamp" ColumnName="Up2WinTimestamp" />
+                <ScalarProperty Name="VolumeSize" ColumnName="VolumeSize" />
+                <ScalarProperty Name="PriceSize" ColumnName="PriceSize" />
+                <ScalarProperty Name="TradeTimestamp" ColumnName="TradeTimestamp" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

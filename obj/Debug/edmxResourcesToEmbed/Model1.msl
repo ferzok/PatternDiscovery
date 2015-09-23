@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dataModelStoreContainer" CdmEntityContainer="dataEntities">
+    <EntitySetMapping Name="stats">
+      <EntityTypeMapping TypeName="dataModel.stat">
+        <MappingFragment StoreEntitySet="stat">
+          <ScalarProperty Name="LastTime" ColumnName="LastTime" />
+          <ScalarProperty Name="Up8win4Stop" ColumnName="Up8win4Stop" />
+          <ScalarProperty Name="Up4win" ColumnName="Up4win" />
+          <ScalarProperty Name="Up2win" ColumnName="Up2win" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="temp_upload">
+      <EntityTypeMapping TypeName="dataModel.temp_upload">
+        <MappingFragment StoreEntitySet="temp_upload">
+          <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="VWAP" ColumnName="VWAP" />
+          <ScalarProperty Name="AvPrice" ColumnName="AvPrice" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="Last" ColumnName="Last" />
+          <ScalarProperty Name="Low" ColumnName="Low" />
+          <ScalarProperty Name="High" ColumnName="High" />
+          <ScalarProperty Name="Open" ColumnName="Open" />
+          <ScalarProperty Name="period" ColumnName="period" />
+          <ScalarProperty Name="offset" ColumnName="offset" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Ric" ColumnName="Ric" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ri_data">
+      <EntityTypeMapping TypeName="dataModel.ri_data">
+        <MappingFragment StoreEntitySet="ri_data">
+          <ScalarProperty Name="win" ColumnName="win" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Down4Win2Sl" ColumnName="Down4Win2Sl" />
+          <ScalarProperty Name="Up4Win2Sl" ColumnName="Up4Win2Sl" />
+          <ScalarProperty Name="Up4Win" ColumnName="Up4Win" />
+          <ScalarProperty Name="Up2Win" ColumnName="Up2Win" />
+          <ScalarProperty Name="Down4Win2SlTimestamp" ColumnName="Down4Win2SlTimestamp" />
+          <ScalarProperty Name="Up4Win2SlTimestamp" ColumnName="Up4Win2SlTimestamp" />
+          <ScalarProperty Name="Up4WinTimestamp" ColumnName="Up4WinTimestamp" />
+          <ScalarProperty Name="Up2WinTimestamp" ColumnName="Up2WinTimestamp" />
+          <ScalarProperty Name="VolumeSize" ColumnName="VolumeSize" />
+          <ScalarProperty Name="PriceSize" ColumnName="PriceSize" />
+          <ScalarProperty Name="TradeTimestamp" ColumnName="TradeTimestamp" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
